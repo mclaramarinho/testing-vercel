@@ -1,15 +1,15 @@
-from flask import Flask, jsonify
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/')
 def home:
-	return jsonify({"message": "You need to choose an endpoint. \nEndpoints available:\n- /substAtivas\n- /excipientes"}), 200
+	return {"message": "You need to choose an endpoint. \nEndpoints available:\n- /substAtivas\n- /excipientes"}
 	
 @app.route('/substAtivas')
 def substAtivas:
-	return jsonify({"message": "substAtivas endpoint"}), 200
+	return {"message": "substAtivas endpoint"}
 
 @app.route('/excipientes')
 def excipientes:
-	return jsonify({"message": "excipientes endpoint"}), 200
+	return {"message": "excipientes endpoint"}
